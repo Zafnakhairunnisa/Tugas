@@ -14,7 +14,7 @@ import numpy as np
     
 if __name__ == '__main__':
     #set new un-labelled sentence
-    input_data= 'I am worried and scared'
+    input_data= 'Im Stress'
     transformer = TfidfTransformer()
     #load the vectorizer 
     loaded_vec = CountVectorizer(decode_error="replace",vocabulary=joblib.load(open("vectorizer.model", "rb")))
@@ -32,4 +32,4 @@ if __name__ == '__main__':
             decision='No Stress'
         else:
             decision='Stress'
-        print('You are ', decision)
+        print('You are', decision)
